@@ -39,8 +39,9 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "Copyright (c) 2014年 Alipay. All rights reserved."
+  #s.license      = "Copyright (c) 2014年 Alipay. All rights reserved."
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "Copyright", :text => "Copyright (c) 2014年 Alipay. All rights reserved." }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -65,7 +66,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-   s.platform     = :ios, "5.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -80,8 +81,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-   s.source       = { :git => "https://github.com/h1101723183/AliPaySDK.git" }
- # s.source       = { :git => "https://github.com/h1101723183/AliPaySDK.git", :tag => "15.1.3" }
+  # s.source       = { :git => "https://github.com/h1101723183/AliPaySDK.git" }
+ s.source       = { :git => "https://github.com/h1101723183/AliPaySDK.git", :tag => "15.1.3" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -94,7 +95,7 @@ Pod::Spec.new do |s|
 
   #s.source_files  = "Classes", "Classes/**/*.{h,m}"
   #s.exclude_files = "Classes/Exclude"
-  s.vendored_frameworks = "*/AlipaySDK.framework"
+  s.vendored_frameworks = "AlipaySDK.framework"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -110,7 +111,7 @@ Pod::Spec.new do |s|
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
-  s.resources = "*/AlipaySDK.bundle"
+  s.resources = "AlipaySDK.bundle"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -126,6 +127,7 @@ Pod::Spec.new do |s|
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
+    s.libraries = "z", "c++"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -137,6 +139,9 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+
+ $ s.xcconfig = { "LIBRARY_SEARCH_PATHS" => "$(PODS_ROOT)/" }
+
   # s.dependency "JSONKit", "~> 1.4"
 
 end

@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  #s.license      = "Copyright (c) 2014年 Alipay. All rights reserved."
+  # s.license      = "Copyright (c) 2014年 Alipay. All rights reserved."
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.license      = { :type => "Copyright", :text => "Copyright (c) 2014年 Alipay. All rights reserved." }
 
@@ -65,8 +65,8 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # s.platform     = :ios
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios
+  # s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -94,10 +94,10 @@ Pod::Spec.new do |s|
   #
 
   #s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  #s.exclude_files = "Classes/Exclude"
-  s.vendored_frameworks = "AlipaySDK.framework"
+  s.exclude_files = "*.podspec"
+  s.vendored_frameworks = "*.framework"
 
-  # s.public_header_files = "Classes/**/*.h"
+  s.public_header_files = "*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -111,7 +111,7 @@ Pod::Spec.new do |s|
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
-  s.resources = "AlipaySDK.bundle"
+  s.resources = "*.bundle"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -127,7 +127,7 @@ Pod::Spec.new do |s|
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
-    s.libraries = "z", "c++"
+  #  s.libraries = "z", "c++"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -140,7 +140,7 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
- # s.xcconfig = { "LIBRARY_SEARCH_PATHS" => "$(PODS_ROOT)/" }
+  # s.xcconfig = { "LIBRARY_SEARCH_PATHS" => "$(PODS_ROOT)/" }
 
   # s.dependency "JSONKit", "~> 1.4"
 

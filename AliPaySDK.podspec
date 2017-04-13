@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "AliPaySDK"
-  s.version      = "15.1.3"
+  s.version      = "15.3.3"
   s.summary      = "AliPay SDK for iOS"
 
   # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  支付宝钱包支付接口开发包2.0标准版(iOS 15.1.3)
+  支付宝钱包支付接口开发包2.0标准版(iOS 15.3.3)
                    DESC
 
   s.homepage     = "https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.w2sigf&treeId=54&articleId=104509&docType=1"
